@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Appointment Form</title>
+  <style>
+    /* Your CSS styles go here */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://st4.depositphotos.com/35773592/39447/i/450/depositphotos_394475250-stock-photo-medical-health-care-background-abstract.jpg");
+      background-size: cover;
+    }
+
+    header {
+      background-color: #1d1f20;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    form {
+      background-color: #bdddf0;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: grid;
+      gap: 1rem;
+    }
+
+    /* Apply different background colors to specific labels */
+    label[for="fullName"],
+    label[for="reason"],
+    label[for="preferredDate"],
+    label[for="preferredProvider"],
+    label[for="medicalConditions"],
+    label[for="allergies"],
+    label[for="surgeries"],
+    label[for="currentMedications"],
+    label[for="symptoms"],
+    label[for="emergencyContact"],
+    label[for="accessibility"],
+    label[for="paymentMethod"],
+    label[for="billingAddress"] {
+      background-color: #333;
+      color: #faf8f5;
+    }
+
+    label,
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box; /* Add this line to include padding and border in the element's total width */
+    }
+
+    /* Center-align the form elements */
+    label,
+    input,
+    textarea,
+    select,
+    button {
+      text-align: center;
+    }
+
+    /* Style the select dropdown */
+    select {
+      margin-bottom: 1rem;
+    }
+
+    /* Add some space between form sections */
+    h3 {
+      margin-top: 1.5rem;
+    }
+
+    /* Center-align the submit button */
+    .submit-btn-container {
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #053d7a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Your header content goes here -->
+    <h1>Your Detailed Appointment!</h1>
+  </header>
+  
+  <main>
+    <div class="container">
+      <form id="appointmentForm">
+        <!-- The form content goes here -->
+        <h2 style="text-align: center;">Appointment Request Form</h2>
+        
+        <label for="fullName">Full Name(age):</label>
+        <input type="text" id="fullName" required>
+
+        <label for="reason">Reason for the appointment or primary concern:</label>
+        <textarea id="reason" rows="4" required></textarea>
+
+        <label for="preferredDate">Preferred date and time for the appointment (if applicable):</label>
+        <input type="datetime-local" id="preferredDate">
+
+        <label for="preferredProvider">Preferred healthcare provider (if known):</label>
+        <input type="text" id="preferredProvider">
+
+        <h3>Medical History</h3>
+
+        <label for="medicalConditions">Pre-existing medical conditions:</label>
+        <textarea id="medicalConditions" rows="4"></textarea>
+
+        <label for="allergies">Allergies (food, medication, environmental):</label>
+        <textarea id="allergies" rows="4"></textarea>
+
+        <label for="surgeries">Previous surgeries or hospitalizations:</label>
+        <textarea id="surgeries" rows="4"></textarea>
+
+        <h3>Current Medications</h3>
+
+        <label for="currentMedications">List of all medications the patient is currently taking:</label>
+        <textarea id="currentMedications" rows="4"></textarea>
+
+        <h3>Symptoms and Health Issues</h3>
+
+        <label for="symptoms">Detailed description of the current health issue or symptoms:</label>
+        <textarea id="symptoms" rows="4" required></textarea>
+
+        <h3>Emergency Contact Information</h3>
+
+        <label for="emergencyContact">Name and contact details of an emergency contact:</label>
+        <input type="text" id="emergencyContact" required>
+
+        <h3>Accessibility Requirements</h3>
+
+        <label for="accessibility">Any specific accommodations the patient may require:</label>
+        <textarea id="accessibility" rows="4"></textarea>
+
+        <h3>Payment and Billing Information</h3>
+
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod">
+          <option value="creditCard">Credit Card</option>
+          <option value="debitCard">Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="bankTransfer">Bank Transfer</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <label for="billingAddress">Billing Address:</label>
+        <textarea id="billingAddress" rows="4"></textarea>
+
+        <div class="submit-btn-container">
+          <button type="submit"><a href = "paitentprofile.html">Submit Appointment Request</a></button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Your footer content goes here -->
+    <p>2023 CaringHopes. All rights reserved.</p>
+  </footer>
+
+  
+</body>
+</html>
+  
+
+
+
+
+     
+
+
+
+  
+
+
+   
+
+  
+
+
+   
+

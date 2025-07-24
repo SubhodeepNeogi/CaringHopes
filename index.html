@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="landing_page/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/css/splide.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="relative h-10 w-full bg-white">
+            <h1 class="ml-4 text-lg font-extrabold mt-3 text-green-500">CARING HOPES</h1>
+            <a href=""><p class=" text-emerald-700 absolute right-44 top-0 hover:text-emerald-400">About Us</p></a>
+            
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-400 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent absolute top-0 right-64 text-emerald-700">Join Us<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg></button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Join as Phycologist</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Join as Psychiatrist</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Join as Psychotherapist</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Join as Counseller</a>
+                  </li>
+                </ul>
+                <div class="py-1 pt-2 text-center">
+                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign in</button>
+                </div>
+            </div>
+    
+            <a href=""><p class=" text-emerald-700 absolute right-80 top-0 hover:text-emerald-400 mr-7">Students Corner</p></a>
+            <a href=""><p class=" text-emerald-700 absolute right-96 top-0 hover:text-emerald-400 mr-24">Corporate Corner</p></a>
+            <a href=""><p class=" text-emerald-700 absolute right-96 top-0 hover:text-emerald-400 mr-60">Music Therapy</p></a>
+    
+            <button type="button" class="absolute right-5 -top-1 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-3 py-2 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="TAILWIND/signupin.html">Sign in/Sign up</button></a>
+        </div>
+        </nav>
+    
+<!--Header-->
+    <div class="relative text-center">
+        <img src="landing_page/hearder_image1.jpg" alt=" header image" style="width: 1550px; height: 500px; object-fit: cover;">
+            
+            
+        <h1 class="absolute top-32 text-8xl font-mono header-text font-black" style="left: 32%;">CARING HOPES</h1>
+        <h2 class="absolute top-60 text-4xl font-mono header-text2" style="left: 28%;">SHARE YOUR WORRIES AND CARE YOUR HOPES</h2>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-full absolute top-80 header-button" style="left: 38%;">
+            HOPELINE: LET'S TALK FREELY WITH EXPERTS
+          </button>
+    </div>
+
+
+    <div class="text-center py-7">
+        <h2 class="text-2xl font-semibold">TRY</h2>
+        <p class="text-lg font-light">Try our short self-help guides</p>
+        <hr class="m-5 shadow" style="height: 1.5px; background-color:whitesmoke">
+    </div>
+
+<!--Cards-->
+    <div class="relative">
+        <!--Stress-->
+        <div class="flip-card shadow-lg">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1 class="absolute text-3xl font-serif" style="top: 45%; left: 35%;">STRESS</h1>
+            </div>
+            <div class="flip-card-back">
+                <h1 class="mt-8">How to control stress?</h1>
+                <p class="p-2">● Stop where you are and take a deep breath.</p>
+                <p class="p-2">● Exercise- daily 15 minutes of exercise can reduce stress ( try to enjoy while doing it)</p>
+                <p class="p-2">● Detach yourself from the situation/ introspect/ meditate.</p>
+                <p class="p-2">● Reduce intake of caffeine and alcohol</p>
+            </div>
+            </div>
+        </div>
+        <!--Anxiety-->
+        <div class="flip-card shadow-lg absolute top-0" style="left:30%;">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1 class="absolute text-3xl font-serif" style="top: 45%; left: 30%;">ANXIETY</h1>
+            </div>
+            <div class="flip-card-back" style="background-color: greenyellow;">
+                <h1 class="mt-8">How to control anxiety?</h1>
+                <p class="p-2">● Exercise- daily 15 minutes of exercise can reduce stress ( try to enjoy while doing it)</p>
+                <p class="p-2">● Practicing yoga and meditation.</p>
+                <p class="p-2">● Reduce intake of caffeine and alcohol</p>
+                <p class="p-2">● Try to get enough sleep.</p>
+                <p class="p-1">● Spend time with your friends and family.</p>
+            </div>
+            </div>
+        </div>
+        <!--Insomnia-->
+        <div class="flip-card shadow-lg absolute top-0" style="left:60%;">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1 class="absolute text-3xl font-serif" style="top: 45%; left: 26%;">INSOMNIA</h1>
+            </div>
+            <div class="flip-card-back" style="background-color: rgb(214, 214, 31);">
+                <h1 class="mt-8">How to control insomnia?</h1>
+                <p class="p-2">● Stay calm and take a deep breath.</p>
+                <p class="p-2">● Engage yourself in your favourite hobbies.</p>
+                <p class="p-2">● Medication is the best way to deal with lack of energy.</p>
+                <p class="p-2">● Listen some good music or read some good stuff before go to bed.</p>
+                <p class="p-1">● Reduce intake of caffeine and alcohol.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative mt-7">
+        <!--Memory Problem-->
+        <div class="flip-card shadow-lg">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1 class="absolute text-2xl font-serif" style="top: 45%; left: 12%;">MEMORY PROBLEM</h1>
+            </div>
+            <div class="flip-card-back" style="background-color: red;">
+                <h1 class="mt-8">How to sharpen your memory?</h1>
+                <p class="p-2">● Establish Your Own Routine.</p>
+                <p class="p-2">● Create Stories In Your Mind.</p>
+                <p class="p-2">● Write Down Things.</p>
+                <p class="p-2">● Have a Mental Workout.</p>
+                <p class="p-1">● Eat more foods which will improve your memory.</p>
+            </div>
+            </div>
+        </div>
+        <!--Concentration problem-->
+        <div class="flip-card shadow-lg absolute top-0" style="left: 30%;">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1 class="absolute text-2xl font-serif" style="top: 42%; left: 4%;">CONCENTRATION PROBLEM</h1>
+            </div>
+            <div class="flip-card-back" style="background-color: green;">
+                <h1 class="mt-8">How to improve concentration?</h1>
+                <p class="p-2">● Try games like Sudoku, Crossword Puzzles, Chess, Jigsaw Puzzles, Word Search or Scramble, Memory Games</p>
+                <p class="p-2">● Improve sleep. Maintain proper sleep timing to have a perfect sleep cycle.</p>
+                <p class="p-2">● Do exercise regularly and routinely.</p>
+            </div>
+            </div>
+        </div>
+        <!--Exam phobia-->
+        <div class="flip-card shadow-lg absolute top-0" style="left: 60%;">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1 class="absolute text-2xl font-serif" style="top: 45%; left: 23%;">EXAM PHOBIA</h1>
+            </div>
+            <div class="flip-card-back" style="background-color: orange;">
+                <h1 class="mt-8">Things To Do Before Exam:-</h1>
+                <p class="p-2">● Planning is the key to good revision.</p>
+                <p class="p-2">● Take regular breaks. You Deserve It.</p>
+                <p class="p-2">● Eat proper meal.</p>
+                <p class="p-2">● Get creative. Make your own revision material.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <hr class="m-5 shadow mt-12" style="height: 1.5px; background-color:whitesmoke">
+    <div class="mt-6 text-center">
+        <h1 class="text-2xl font-semibold text-green-500">MEET HOPELINE</h1>
+        <p class="text-base py-2 font-medium text-slate-500" style="padding-left: 440px; padding-right: 440px;">A desire to help and empower others in sustaining, maintaining and develop a good mental health</p>
+    </div>
+
+<!--Features-->
+    <div class="relative my-10 mt-20 bg-gradient-to-r from-lime-400 to-lime-700 py-10">
+        <div class="m-2 text-center max-w-xs" style="margin-left: 180px;">
+            <img src="landing_page/doctor.png" alt="Doctor" class="h-24" style="margin-left: 110px; margin-top: 2px; margin-bottom: 10px;">
+            <h2 class="text-4xl font-extrabold font-mono">100+</h2>
+            <p class="text-lg font-thin">Regestered Doctors</p>
+        </div>
+        <div class="text-center max-w-md absolute top-11" style="left: 46%;">
+            <img src="landing_page/patient1.png" alt="Doctor" class="h-24" style="margin-left: 10px; margin-top: 2px; margin-bottom: 10px;">
+            <h2 class="text-4xl font-extrabold font-mono">11000+</h2>
+            <p class="text-lg font-thin">Happy Patients</p>
+        </div>
+        <div class="text-center max-w-md absolute top-11" style="left: 72%;">
+            <img src="landing_page/social-care1.png" alt="Doctor" class="h-24" style="margin-left: 12px; margin-top: 2px; margin-bottom: 10px;">
+            <h2 class="text-4xl font-extrabold font-mono">15000+</h2>
+            <p class="text-lg font-thin">Registered till now</p>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="TAILWIND\signupin.html" button type="button" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-400 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-lg px-16 py-5 text-center mr-2 mb-12">Join Now</button></a>
+    </div>
+
+<!--Workings-->
+    <div class="relative mt-32 mb-40">
+        <img src="landing_page/video_call.jpg" alt="" style="height: 1200px; width: 517px; object-fit: cover;">
+        <img src="landing_page/phone_call.jpg" alt="" class="absolute top-0" style="height: 1200px; width: 517px; object-fit: cover; left: 517px;">
+        <img src="landing_page/text_massage.jpg" alt="" class="absolute top-0" style="height: 1200px; width: 480px; object-fit: cover; left: 1034px;">
+        <img src="landing_page/Workings_background.jpg" alt="" class="absolute top-0 opacity-75" style="height:  1200px; width: 1550px; object-fit: cover;">
+        <div class="absolute h-3 bg-white top-80" style="left: 30%; width: 650px; transform: rotate(110deg);"></div>
+        <div class="absolute top-20 left-72 ml-5 text-center">
+            <img src="landing_page/video-camera.png" alt="" class="mb-2 ml-24 h-24">
+            <h4 class="text-2xl font-bold text-white m-4">Video Meet</h4>
+            <p class="w-72 text-lg text-white">Book an online session and talk to the doctors through video call. Share your thoughts and problems with our end to end encrypted video sessions.</p>
+        </div>
+        <div class="absolute top-60 right-56 ml-5 text-center">
+            <img src="landing_page/phone-call.png" alt="" class="mb-2 ml-24 h-24">
+            <h4 class="text-2xl font-bold text-white m-4">Voice Call</h4>
+            <p class="w-72 text-lg text-white">Book an online session and talk to the doctors through call. Share your thoughts and problems with our end to end encrypted audio sessions.</p>
+        </div>
+        <div class="absolute h-3 left-36 top-96 mt-72 bg-white" style="width: 1280px;"></div>
+        <div>
+            <img src="landing_page/chat-box.png" alt="" class="h-24 absolute left-72"  style="top: 750px;">
+            <h4 class="text-2xl font-bold text-white m-4 absolute left-96" style="top: 720px;">Chat sessions</h4>
+            <p class="w-96 text-lg text-white absolute left-96 ml-5" style="top: 780px;">Book a session of any Phycologist, Psychiatrist, Psychotherapist and get unlimited massege access. Contact them via massege and get connected.</p>
+        </div>
+        <div>
+            <img src="landing_page/data-security.png" alt="" class="absolute h-24 right-60" style="top: 920px;">
+            <h4 class="text-2xl font-bold text-white m-4 absolute right-80 mr-9" style="top: 880px;">Encryption</h4>
+            <p class="w-96 text-lg text-white absolute right-80 mr-10 text-right" style="top: 935px;">We value your Privacy and it is of utmost important to us.All your video, audio and chats are end to end encrypted and secure.</p>
+        </div>
+    </div>
+
+<!--Slider-->
+    <h1 class="text-center text-6xl pb-5 font-sans font-extrabold text-blue-500 mt-20 ml-4">Listen from some of our clients</h1>
+    <div class="h-2 bg-green-500 mb-5 rounded-lg" style="width: 650px; margin-left: 435px;"></div>
+    
+<!-- component -->
+<!-- This is an example component -->
+    <div class="bg-gradient-to-r from-blue-200 to-green-600 py-10 mb-20">
+
+        <div class="max-w-2xl mx-auto">
+
+            <div id="default-carousel" class="relative" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                        <img src="landing_page/client1.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <div class="absolute top-72 bg-white bg-opacity-70 p-4" style="left: 25%;">
+                            <h2 class="font-sans text-lg">My life changed after finding this website</h2>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="landing_page/client2.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <div class="absolute top-64 bg-white bg-opacity-70 p-4" style="left: 16%;">
+                            <h2 class="font-sans text-lg">I was suffering from depression and anxity.</h2> 
+                            <h2 class="font-sans text-lg">But with the help of Caring Hopes I found a new way to live.</h2>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="landing_page/client3.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                        <div class="absolute bg-white bg-opacity-70 p-4" style="left: 20%; top:280px;">
+                            <h2 class="font-sans text-lg">I have found my Therapist through Caring Hpoes.</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <span class="hidden">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <span class="hidden">Next</span>
+                    </span>
+                </button>
+            </div>
+            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+        </div>
+    </div>
+
+    <div class="relative">
+        <h4 class="text-3xl font-medium pl-80 ml-32 mb-20">Register to Caring Hpoes Now: </h4>
+        <button class="absolute -top-2 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800" style="left: 58%;">
+            <a href="TAILWIND\signupin.html" span class="relative px-6 py-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Sign in/Sign up
+            </span></a>
+    </div>
+
+<!--You ar not alone-->
+    <div class="relative" style="height: 860px; background-image: linear-gradient(to right, rgb(16, 185, 129), rgb(101, 163, 13));">
+        <h1 class="text-center text-5xl font-sans font-extrabold text-white p-4">You are NOT Alone</h1>
+        <img src="landing_page/mental_health_issue.jpg" alt="mental health issues" class="h-52 m-8">
+        <h3 class="absolute top-28 text-2xl font-bold text-white" style="left: 30%;">1 in every 8 people in the world live with a mental disorder</h3>
+        <div class="absolute top-36 h-1 bg-white" style="left: 31%; width: 700px;"></div>
+        <p class="absolute top-40 pr-14 pt-1 text-lg" style="left: 35%;">In 2019, 1 in every 8 people, or 970 million people around the world were living with a mental disorder, with anxiety and depressive disorders the most common. 
+        In 2020, the number of people living with anxiety and depressive disorders rose significantly because of the COVID-19 pandemic.  
+        Initial estimates show a 26% and 28% increase respectively for anxiety and major depressive disorders in just one year. 
+        While effective prevention and treatment options exist, most people with mental disorders do not have access to effective care. 
+        Many people also experience stigma, discrimination and violations of human rights. </p>
+        <h1 class="absolute top-96 text-2xl font-bold text-white" style="left: 2%;">70 million people in INDIA suffer from common and severe mental disorders</h1>
+        <div class="absolute top-96 h-1 mt-7 bg-white" style="left: 1%; width: 850px;"></div>
+        <p class="absolute pl-8 mr-96 pr-52 text-2xl leading-9 italic" style="top: 425px;">In his address, Shri Mansukh Mandaviya, the Union Health Minister highlighted the importance of mental health. 
+            ❝It is intrinsically linked to physical health and wellness, and firms an integral part of our traditional knowledge❞, he said. 
+            The Union Health Minister, Government of India underscored the importance of inclusion of understanding of mental health in the curriculum of teachers, as they form a pillar of support for children. 
+            ❝The role of parents, families and communities in listening to children and supporting them to talk about mental health issues helps to address them early❞</p>
+        <h1 class="absolute text-3xl font-bold" style="top: 710px; left: 46%;">- UNICEF</h1>
+        <img src="landing_page/meditation.jpg" alt="meditate" class="absolute h-72" style="top: 400px; left: 65%">
+        <button type="button" class="text-white bg-gray-800 absolute hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-14 py-4 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" style="top: 780px; left: 46%;">KNOW MORE</button>
+    </div>
+    
+
+<!--Team cards-->
+    <h1 class="text-center m-9 text-2xl font-bold" style="margin-bottom: 50px;">MEET SOME OF OUR THE DOCTORS</h1>
+
+    <div class="relative">
+        <div class="m-5" style="margin-left: 60px;">
+            <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="landing_page/blank_profile_pic.jpg" alt="profile picture">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Doctor 1</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Phycologist</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Bengali, English</p>
+                </div>
+            </a>
+        </div>
+        <div class="absolute top-0" style="left: 36%;">
+            <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="landing_page/blank_profile_pic.jpg" alt="profile picture">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Doctor 2</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Psychiatrist</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" style="padding-right: 120px;">English, Hindi</p>
+                </div>
+            </a>
+        </div>
+        <div class="absolute top-0" style="left: 67%;">
+            <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="landing_page/blank_profile_pic.jpg" alt="profile picture">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Doctor 3</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Counselling</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" style="padding-right: 120px;">English, Hindi, Bengali</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="relative mt-10">
+        <div class="m-5" style="margin-left: 60px;">
+            <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="landing_page/blank_profile_pic.jpg" alt="profile picture">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Doctor 4</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Phycologist</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Bengali, English</p>
+                </div>
+            </a>
+        </div>
+        <div class="absolute top-0" style="left: 36%;">
+            <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="landing_page/blank_profile_pic.jpg" alt="profile picture">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Doctor 5</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Psychiatrist</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" style="padding-right: 120px;">English, Hindi</p>
+                </div>
+            </a>
+        </div>
+        <div class="absolute top-0" style="left: 67%;">
+            <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="landing_page/blank_profile_pic.jpg" alt="profile picture">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">Doctor 6</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Counselling and Psychotherapy</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" style="padding-right: 120px;">English, Hindi, Bengali</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+<!--Specialities-->
+    <div class="relative mt-10">
+        <img src="specialities_image2.jpg" alt="Specialities Backgroud" class="opacity-20" style="height:600px; width: 1550px; object-fit: cover;">
+        <h1 class="absolute top-20 left-40 text-5xl font-bold animate-typing1">Solution For Your Every Problem</h1>
+        <h1 class="absolute text-5xl font-bold animate-typing2 right-20" style="top: 500px;">Take Care of Your Mental Health</h1>
+        <div class="absolute top-52 bg-white h-20 w-36 border-8 border-green-600 rounded-lg hover:bg-gray-300 hover:text-orange-500 text-center" style="left: 500px;">
+            <p class="text-green-800 text-xl mt-4" style="padding-left: 3px;">Depression</p>
+        </div>
+        <div class="absolute top-52 bg-white h-20 w-36 border-8 border-green-600 rounded-lg hover:bg-gray-300 hover:text-orange-500 text-center" style="left: 750px;">
+            <p class="text-green-800 text-xl mt-4" style="padding-left: 3px;">Anxity</p>
+        </div>
+        <div class="absolute top-52 bg-white h-20 w-36 border-8 border-green-600 rounded-lg hover:bg-gray-300 hover:text-orange-500 text-center" style="left: 1000px;">
+            <p class="text-green-800 text-xl mt-4" style="padding-left: 3px;">Stress</p>
+        </div>
+        <div class="absolute top-80 mt-10 bg-white h-20 w-36 border-8 border-green-600 rounded-lg hover:bg-gray-300 hover:text-orange-500 text-center" style="left: 380px;">
+            <p class="text-green-800 text-xl mt-4" style="padding-left: 3px;">Frustration</p>
+        </div>
+        <div class="absolute top-80 mt-10 bg-white h-20 w-36 border-8 border-green-600 rounded-lg hover:bg-gray-300 hover:text-orange-500 text-center" style="left: 620px;">
+            <p class="text-green-800 text-xl mt-4" style="padding-left: 3px;">Trauma</p>
+        </div>
+        <div class="absolute top-80 mt-10 bg-white h-20 w-36 border-8 border-green-600 rounded-lg hover:bg-gray-300 hover:text-orange-500 text-center" style="left: 860px;">
+            <p class="text-green-800 text-xl mt-4" style="padding-left: 3px;">Grief</p>
+        </div>
+        <div class="absolute top-80 mt-10 bg-white h-20 w-36 border-8 border-green-600 rounded-lg hover:bg-gray-300 hover:text-orange-500 text-center" style="left: 1100px;">
+            <p class="text-green-800 text-xl mt-4" style="padding-left: 3px;">ADHD</p>
+        </div>
+    </div>
+
+<!--Problems-->
+    
+<div class="container mx-auto my-20">
+    <div class="splide">
+      <div class="splide__track">
+        <div class="splide__list gap-x-4">
+          <div class="w-full p-4 shadow splide__slide">
+            <div class="space-y-2 text-center border-2 pt-2 pb-6 bg-slate-200 hover:bg-gray-300">
+                <img src="landing_page/stress.jpg" alt="" class="h-56 rounded-lg ml-16 mb-1">
+              <h3 class="text-2xl font-semibold">
+                STRESS
+              </h3>
+              <p class="text-gray-600 w-80 ml-24 pb-4">
+                Stress is a very common thing in the society now days. It happens due to overthinking, work pressure.
+              </p>
+              <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-base px-8 py-5 text-center mr-2 mb-2">Explore</button>
+            </div>
+          </div>
+          <div class="w-full p-4 shadow splide__slide">
+            <div class="space-y-2 text-center border-2 pt-2 pb-6 bg-slate-200 hover:bg-gray-300">
+                <img src="landing_page/anxiety.jpg" alt="" class="h-56 rounded-lg ml-16 mb-1">
+                <h3 class="text-2xl font-semibold">
+                    ANXIETY
+              </h3>
+              <p class="text-gray-600 w-80 ml-24 pb-4">
+                Anxity is a very common thing in the society now days. It happens due to overthinking, work pressure.
+              </p>
+              <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-base px-8 py-5 text-center mr-2 mb-2">Explore</button>
+            </div>
+          </div>
+          <div class="w-full p-4 shadow splide__slide">
+            <div class="space-y-2 text-center border-2 pt-2 pb-6 bg-slate-200 hover:bg-gray-300">
+                <img src="landing_page/depression.jpg" alt="" class="h-56 rounded-lg ml-28 mb-1">
+                <h3 class="text-2xl font-semibold">
+                DEPRESSION
+              </h3>
+              <p class="text-gray-600 w-80 ml-24 pb-4">
+                Depression is a very serious thing in the society now days. It happens due to overthinking, work pressure.
+              </p>
+              <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-base px-8 py-5 text-center mr-2 mb-2">Explore</button>
+            </div>
+          </div>
+          <div class="w-full p-4 shadow splide__slide">
+            <div class="space-y-2 text-center border-2 pt-2 pb-6 bg-slate-200 hover:bg-gray-300">
+                <img src="landing_page/frustration.jpg" alt="" class="h-56 rounded-lg ml-32 mb-1">
+                <h3 class="text-2xl font-semibold">
+                FRUSTRATION
+              </h3>
+              <p class="text-gray-600 w-80 ml-24 pb-4">
+                Frustrationis a very common thing in the society now days. It happens due to overthinking, work pressure.
+              </p>
+              <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-base px-8 py-5 text-center mr-2 mb-2">Explore</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/js/splide.min.js"></script>
+  <script>
+    var splide = new Splide('.splide', {
+      type: 'loop',
+      perPage: 3,
+      rewind: true,
+    });
+
+    splide.mount();
+  </script>
+
+<!--Blogs-->
+
+<section class="text-neutral-700 dark:text-neutral-300 mt-32">
+    <div class="mx-auto text-center md:max-w-xl lg:max-w-3xl relative">
+      <h3 class="mb-5 text-5xl font-bold">Testimonials</h3>
+        <div class="absolute bg-green-500 w-40 left-72 ml-4 rounded-lg pr-px" style="height: 6px;"></div>
+    </div>
+  
+    <!--First Testimonial-->
+    <div class="grid gap-6 text-center md:grid-cols-3 m-16 mt-24">
+      <div>
+        <div
+          class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30  hover:bg-gray-300 hover:shadow-slate-600">
+          <div class="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>
+          <div
+            class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+            <img
+              src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
+          </div>
+          <div class="p-6">
+            <h4 class="mb-2 text-2xl font-semibold">Maria Smantha</h4>
+            
+            <div class="flex items-center space-x-1 ml-36 pb-2.5 pl-2.5">
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+
+            <hr />
+            <p class="mt-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="inline-block h-7 w-7 pr-2"
+                viewBox="0 0 24 24">
+                <path
+                  d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+              </svg>
+              Lorem ipsum dolor sit amet eos adipisci, consectetur
+              adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!--Second Testimonial-->
+      <div>
+        <div
+          class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30  hover:bg-gray-300 hover:shadow-slate-600">
+          <div class="h-28 overflow-hidden rounded-t-lg bg-[#7a81a8]"></div>
+          <div
+            class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+            <img
+              src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" />
+          </div>
+          <div class="p-6">
+            <h4 class="mb-2 text-2xl font-semibold">Lisa Cudrow</h4>
+
+            <div class="flex items-center space-x-1 ml-36 pb-2.5 pl-2.5">
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+
+            <hr />
+            <p class="mt-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="inline-block h-7 w-7 pr-2"
+                viewBox="0 0 24 24">
+                <path
+                  d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+              </svg>
+              Neque cupiditate assumenda in maiores repudi mollitia
+              architecto.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!--Third Testimonial-->
+      <div>
+        <div
+          class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30 hover:bg-gray-300 hover:shadow-slate-600">
+          <div class="h-28 overflow-hidden rounded-t-lg bg-[#6d5b98]"></div>
+          <div
+            class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+            <img
+              src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" />
+          </div>
+          <div class="p-6">
+            <h4 class="mb-2 text-2xl font-semibold">John Smith</h4>
+
+            <div class="flex items-center space-x-1 ml-36 pb-2.5 pl-2.5">
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                </svg>
+            </div>
+
+            <hr />
+            <p class="mt-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="inline-block h-7 w-7 pr-2"
+                viewBox="0 0 24 24">
+                <path
+                  d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+              </svg>
+              Delectus impedit saepe officiis ab aliquam repellat rem unde
+              ducimus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--Footer-->
+    
+<footer class="bg-black dark:bg-gray-900 mt-28">
+    <div class="mx-auto w-full max-w-screen-xl">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Company</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=" hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Careers</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Brand Center</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Social</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">MacOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="px-4 py-6 bg-black dark:bg-gray-700 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 space-x-5 sm:justify-center md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Dribbble account</span>
+              </a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

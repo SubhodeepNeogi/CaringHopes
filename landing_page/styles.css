@@ -1,0 +1,104 @@
+/*annimation*/
+.header-text{
+    animation: slide-up 4s;
+}
+@keyframes slide-up{
+    from{
+        opacity: 0.2;
+        top: 350px;
+    }
+    to{
+        opacity: 1;
+        top: 128px;
+    }
+}
+.header-text2{
+    animation: slide-up2 4s;
+}
+@keyframes slide-up2{
+    from{
+        opacity: 0.2;
+        top: 400px;
+    }
+    to{
+        opacity: 1;
+        top: 240px;
+    }
+}
+.header-button{
+    animation: slide-up-button 4s;
+}
+@keyframes slide-up-button {
+    from{
+        opacity: 0.2;
+        top: 420px;
+    }
+    to{
+        opacity: 1;
+        top: 320px;
+    }
+}
+/*Cards*/
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 320px;
+    margin-left: 160px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: white;
+    color: black;
+}
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/*Specialities animations*/
+.animate-typing1{
+    animation: slide-right 2s
+}
+@keyframes slide-right {
+    from{
+        opacity: 0.2;
+        left: 0px;
+    }
+    to{
+        opacity: 1;
+        left: 160px;
+    }
+}
+.animate-typing2{
+    animation: slide-left 2s;
+}
+@keyframes slide-left{
+    from{
+        opacity: 0.2;
+        right: 0px;
+    }
+    to{
+        opacity: 1;
+        right: 80px;
+    }
+}

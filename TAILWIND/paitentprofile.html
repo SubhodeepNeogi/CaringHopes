@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Page</title>
+  <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <style>
+   
+    .profile-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .profile-buttons button {
+      padding: 0.75rem 0.5rem;
+      border-radius: 10px;
+      font-weight: 100;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .profile-buttons .btn-set-appointments {
+      background-color: #0a3b8b;
+      color: #fff;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .profile-buttons .btn-view-appointments {
+      background-color: #0c8503;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .profile-buttons button:hover {
+      background-color: #0b7807;
+    }
+    .profile-card {
+      background-color: #f0f8ff; 
+    }
+    .statistics-item {
+      position: relative;
+    }
+   
+.online-meeting-box {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.online-meeting-info {
+  display: flex;
+  align-items: center;
+  border: 2px solid #3b82f6; 
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.online-meeting-placeholder {
+  margin-right: 0.5rem;
+  color: #aaa;
+  font-weight: bold; 
+}
+
+.online-meeting-link {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 180px; 
+  background-color: #f0f8ff; 
+  padding: 0.25rem; 
+}
+
+.btn-join-meeting {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold; 
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: #047e37;
+  color: #fff;
+}
+
+.btn-join-meeting:hover {
+  background-color: #1e40af;
+}
+
+
+
+  
+    .statistics-item::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0; 
+      width: 0;
+      height: 2px;
+      background-color: #3b82f6; 
+      transition: width 0.8s ease, left 0.2s ease; 
+    }
+  
+    .statistics-item:hover::after {
+      width: 100%;
+      left: 0; 
+    }
+    @keyframes countUp {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+    
+    .count-up {
+      animation: countUp 1s ease-in-out;
+    }
+    .table-auto {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+  
+    .table-auto th,
+    .table-auto td {
+      border: 1px solid #e2e8f0;
+      padding: 12px;
+      text-align: center;
+    }
+  
+    .table-auto th {
+      background-color: #f0f4f8;
+      font-weight: bold;
+      color: #4a5568;
+      text-transform: uppercase;
+    }
+  
+    .table-auto td img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    .table-auto tr:nth-child(even) {
+      background-color: #f7fafc;
+    }
+  
+    .table-auto tr:hover {
+      background-color: #ebf4ff;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <main class="profile-page">
+   
+    <section class="relative block h-500-px">
+     
+      <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
+          background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1FSHN8zAvyzUZ1wUNjjbaOmolfNpIc3tFYQ&usqp=CAU');
+        ">
+        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+      </div>
+      
+      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+
+    
+    <section class="relative py-16 bg-blueGray-200">
+      <div class="container mx-auto px-4">
+        
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+          <div class="px-6">
+            <div class="flex flex-wrap justify-center">
+              
+              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                <div class="relative">
+                  <img alt="Profile" src="data:image/jpeg;base64,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" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px">
+                </div>
+              </div>
+              
+              <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                <div class="py-6 px-3 mt-32 sm:mt-0">
+                  <div class="profile-buttons">
+                    <button class="btn-set-appointments"><a href="../Patient_Doctor_list/index.html">Book Appointments</a></button>
+                    <div class="online-meeting-box">
+                      <div class="online-meeting-info">
+                        <span class="online-meeting-placeholder">Enter Meeting Link</span>
+                        <input type="text" class="online-meeting-link" placeholder="Paste the meeting link here">
+                      </div>
+                      <button class="btn-join-meeting">Join Meeting</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="w-full lg:w-4/12 px-4 lg:order-1">
+                <div class="flex justify-center py-4 lg:pt-4 pt-8">
+                  
+                  <div class="mr-4 p-3 text-center statistics-item">
+                    <span id="visitedAppointmentsCount" class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">22</span><span class="text-sm text-blueGray-400">Visited appointments till now</span>
+                  </div>
+                  <div class="mr-4 p-3 text-center statistics-item">
+                    <span id="pendingAppointmentsTodayCount" class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">10</span><span class="text-sm text-blueGray-400">Pending appointments today</span>
+                  </div>
+                  <div class="lg:mr-4 p-3 text-center statistics-item">
+                    <span id="upcomingAppointmentsThisWeekCount" class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">89</span><span class="text-sm text-blueGray-400">Upcoming appointments this week</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="mt-2 py-2 border-t border-blueGray-500 text-center"></div>
+              <div class="flex flex-wrap justify-center"></div>
+            <div class="text-center mt-12">
+              <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                Shreyan Pal Chowdhury
+              </h3>
+              <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+                Kolkata, India
+              </div>
+              <div class="mb-2 text-blueGray-600 mt-10">
+                <i class="fas fa-phone mr-2 text-lg text-blueGray-400"></i>91+8420231825
+              </div>
+              <div class="mb-2 text-blueGray-600">
+                <i class="fas fa-at mr-2 text-lg text-blueGray-400"></i>pchowdhuryshreyan@gmail.com
+              </div>
+              <div class="mb-2 text-blueGray-600">
+                <i class="fas fa-mars mr-2 text-lg text-blueGray-400"></i>Male
+              </div>
+            </div>
+            
+            <div class="mt-10 py-10 border-t border-blueGray-500 text-center">
+              <div class="flex flex-wrap justify-center">
+            
+              <h3 class="text-2xl font-semibold leading-normal mb-4 text-blueGray-700">Appointments</h3>
+              <table class="table-auto w-full border-collapse">
+                <thead>
+                  <tr class="bg-blueGray-50 border-b">
+                    <th class="px-4 py-2 text-left">Profile Photo</th>
+                    <th class="px-4 py-2 text-left">Name</th>
+                    <th class="px-4 py-2 text-left">Specialization</th>
+                    <th class="px-4 py-2 text-left">Date</th>
+                    <th class="px-4 py-2 text-left">Time Slot</th>
+                  </tr>
+                </thead>
+                <tbody id="appointments-body">
+               
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      
+      <footer class="relative bg-blueGray-200 pt-8 pb-6 mt-8">
+        <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+        <div class="text-sm text-blueGray-500 font-semibold py-1">
+          2023 CaringHopes. All rights reserved. <a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank">Notus JS</a> by <a href="https://www.creative-tim.com" class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
+        </div>
+        </div>
+        </div>
+        </div>
+        </footer>
+        </section>
+        
+          </main>
+          <script>
+            const appointments = [
+            {
+              name: "Dr. Kunal Sarkar",
+              profilePhoto: "https://example.com/profile_photo1.jpg",
+              specialization: "Cardiology",
+              date: "2023-07-25",
+              timeSlot: "10:00 - 11:00 AM",
+            },
+            {
+              name: "Dr. Diptendra Sarkar",
+              profilePhoto: "https://example.com/profile_photo2.jpg",
+              specialization: "Pediatrics",
+              date: "2023-07-26",
+              timeSlot: "2:30 - 3:30 PM",
+            },
+            
+          ];
+        
+        
+          function generateAppointmentRows() {
+            const tbody = document.getElementById("appointments-body");
+            tbody.innerHTML = ""; 
+        
+            appointments.forEach((appointment) => {
+              const row = document.createElement("tr");
+              const profilePhotoCell = document.createElement("td");
+              const nameCell = document.createElement("td");
+              const specializationCell = document.createElement("td");
+              const dateCell = document.createElement("td");
+              const timeSlotCell = document.createElement("td");
+        
+              const profilePhoto = document.createElement("img");
+              profilePhoto.src = appointment.profilePhoto;
+              profilePhoto.alt = "Profile";
+              profilePhoto.classList.add("w-10", "h-10", "rounded-full");
+        
+              profilePhotoCell.appendChild(profilePhoto);
+              nameCell.textContent = appointment.name;
+              specializationCell.textContent = appointment.specialization;
+              dateCell.textContent = appointment.date;
+              timeSlotCell.textContent = appointment.timeSlot;
+        
+              row.appendChild(profilePhotoCell);
+              row.appendChild(nameCell);
+              row.appendChild(specializationCell);
+              row.appendChild(dateCell);
+              row.appendChild(timeSlotCell);
+        
+              tbody.appendChild(row);
+            });
+          }
+        
+      
+          generateAppointmentRows();
+        
+          
+            function updateCountersWithAnimation() {
+              const visitedAppointments = 10;
+              const pendingAppointmentsToday = 1;
+              const upcomingAppointmentsThisWeek = 2;
+          
+             
+              animateCount(document.getElementById('visitedAppointmentsCount'), visitedAppointments);
+              animateCount(document.getElementById('pendingAppointmentsTodayCount'), pendingAppointmentsToday);
+              animateCount(document.getElementById('upcomingAppointmentsThisWeekCount'), upcomingAppointmentsThisWeek);
+            }
+          
+            
+            function animateCount(element, targetValue) {
+              let currentCount = 0;
+              const increment = Math.ceil(targetValue / 80);
+          
+              
+              const interval = setInterval(() => {
+                currentCount += increment;
+                if (currentCount >= targetValue) {
+                  element.innerText = targetValue;
+                  element.classList.add('count-up'); 
+                  clearInterval(interval);
+                } else {
+                  element.innerText = currentCount;
+                }
+              }, 20); 
+            }
+          
+            
+            updateCountersWithAnimation();
+          </script>
+          
+          
+       
+        </body>
+        </html>
+
+
+
+
+
+
+                  
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

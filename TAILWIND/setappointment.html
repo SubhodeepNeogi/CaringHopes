@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Appointment Scheduler</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url("https://api.revolve.healthcare/uploads/doctor_physician_with_amobile_app_on_his_phone_2048x1072_1508ffeeec.jpg");
+            background-size: cover;
+        }
+
+       
+     
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0c100d;
+            padding: 20px;
+            color: #fff;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease; 
+        }
+
+        .navigation {
+            display: flex;
+            gap: 40px; 
+            margin-left: 0;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #f05363;
+            transform: scale(1.1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            width: 400px;
+            padding: 30px;
+            background-color: #1d0445;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #f4f0f0;
+            margin-bottom: 20px;
+        }
+
+        .appointment-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        label {
+            font-weight: bold;
+            color: #f4eeee;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 80%; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            background-color: #ebe9e9;
+            font-size: 16px;
+            color: #333;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .form-control:focus {
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 12px 32px;
+            background-color: #068930;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #06953f;
+        }
+
+        .appointments-box {
+            flex: 1;
+            padding: 30px;
+            background-color: #0d023d;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .appointments {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .appointment {
+            padding: 10px;
+            background-color: #eff2f4;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .appointment:last-child {
+            margin-bottom: 0;
+        }
+
+        .appointment:hover {
+            transform: translateY(-3px);
+        }
+
+        .appointment p {
+            margin: 0;
+            color: #333;
+        }
+
+        .appointment p.date {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .appointment p.time {
+            font-size: 14px;
+        }
+
+        
+        footer {
+            text-align: center;
+            background-color: #070e0a;
+            padding: 10px;
+            color: #fff;
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Doctor Scheduler</div>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Slots</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h2>Set Date & Time for Appointments</h2>
+            <div class="appointment-form">
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="start-time">Start Time:</label>
+                    <input type="time" id="start-time" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="end-time">End Time:</label>
+                    <input type="time" id="end-time" class="form-control">
+                </div>
+                <button id="add-btn">Add</button>
+            </div>
+        </div>
+        <div class="appointments-box">
+            <h2>View Slots</h2>
+            <div class="appointments">
+               
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 CaringHopes. All rights reserved.</p>
+    </footer>
+    
+    
+
+<script>
+    document.getElementById('add-btn').addEventListener('click', function() {
+        var date = document.getElementById('date').value;
+        var startTime = document.getElementById('start-time').value;
+        var endTime = document.getElementById('end-time').value;
+
+        var appointmentsDiv = document.querySelector('.appointments');
+
+        var appointmentDiv = document.createElement('div');
+        appointmentDiv.classList.add('appointment');
+        appointmentDiv.innerHTML = '<p class="date">Date: ' + date + '</p><p class="time">Time: ' + startTime + ' - ' + endTime + '</p>';
+
+        appointmentsDiv.appendChild(appointmentDiv);
+
+        document.getElementById('date').value = '';
+        document.getElementById('start-time').value = '';
+        document.getElementById('end-time').value = '';
+    });
+
+   
+    var dateInput = document.getElementById('date');
+    var today = new Date().toISOString().split('T')[0]; 
+
+   
+    var oneWeekFromToday = new Date();
+    oneWeekFromToday.setDate(oneWeekFromToday.getDate() + 7);
+    var maxDate = oneWeekFromToday.toISOString().split('T')[0];
+
+ 
+    dateInput.setAttribute('min', today);
+    dateInput.setAttribute('max', maxDate);
+</script>
+</body>
+</html>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

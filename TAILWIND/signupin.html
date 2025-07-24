@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In/Sign Up Cards</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    
+    body{
+      background-image: url("https://gtelocalize.com/wp-content/uploads/medical-translation-app-banner.jpg");
+      background-size: cover;
+    }
+    .card-container {
+      perspective: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 360px;
+      height: 560px;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+    }
+
+    .card-front {
+      background-color: #13065e;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 8px;
+    }
+
+    .form-container {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      transition: all 0.3s;
+      transform: translateY(0);
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="password"]:focus,
+    .form-group input[type="email"]:focus {
+      border-color: #4f46e5;
+      box-shadow: 0 0 8px rgba(79, 70, 229, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .form-group input[type="text"]:not(:placeholder-shown),
+    .form-group input[type="password"]:not(:placeholder-shown),
+    .form-group input[type="email"]:not(:placeholder-shown) {
+      transform: translateY(-3px);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group button {
+      background-color: #4f46e5;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-group .remember-password {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group .remember-password label {
+      margin-left: 0.5rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 10px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      padding: 20px;
+      background-color: #4a148c;
+    }
+
+    .header h2 {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .middle-section {
+    
+      height: 280px;
+      overflow: hidden;
+      border-bottom: 1px solid #fff;
+      border-top: 1px solid #fff;
+    }
+
+    .middle-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+    }
+
+    .body {
+      text-align: center;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 20px;
+      background-color: #a153f0;
+    }
+
+    .body p {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <div class="card-container">
+    <!-- Sign In Card -->
+    <div class="card flipped" id="signin-card">
+      <!-- Front face (Sign In Form) -->
+      <div class="card-face card-front">
+        <h2 class="text-2xl mb-4 text-white">Sign In to CaringHopes!</h2>
+        <form class="form-container">
+          <div class="form-group">
+            <label for="signin-username">Username</label>
+            <input type="text" id="signin-username" placeholder="Enter your username">
+          </div>
+          <div class="form-group">
+                      
+            <label for="signin-password">Password</label>
+            <input type="password" id="signin-password" placeholder="Enter your password">
+          </div>
+          <div class="form-group">
+            <div class="remember-password">
+              <input type="checkbox" id="remember-device">
+              <label for="remember-device">Remember this device?</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="mx-auto"><a href="paitentprofile.html">Sign In</a></button>
+          </div>
+          <div class="form-group">
+            <a href="#" class="text-white">Lost password?</a>
+          </div>
+        </form>
+      </div>
+   
+      <div class="card-face card-back">
+    
+        <div class="header">
+          <h2 class="text-xl mb-2 text-white">Welcome back!</h2>
+          <p class="text-white">Please sign in to access your account.</p>
+        </div>
+       
+        <div class="middle-section">
+          
+          <img src="https://img.freepik.com/premium-vector/male-patient-consulting-doctor-using-smartphone-app-telemedicine-concept-vector-illustration_253672-232.jpg" alt="Welcome Back Image">
+        </div>
+        <div class="body">
+          <p class="text-white">If you don't have an account yet, you can sign up on the other side.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Card -->
+    <div class="card flipped" id="signup-card">
+      <!-- Front face (Sign Up Form) -->
+      <div class="card-face card-front">
+        <form class="form-container">
+        <h2 class="text-2xl mb-6 text-white">Sign Up to CaringHopes!</h2>
+        
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" placeholder="Enter a username">
+          </div>
+          <div class="form-group">
+            <label for="signup-username">Phone Number</label>
+            <input type="text" id="signup-phone-number" placeholder="Enter phone number">
+          </div>
+         
+         
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Enter a password">
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" id="signup-confirm-password" placeholder="Confirm your password">
+          </div>
+          <div class="form-group">
+            <button type="submit"><a href = "../index.html">Sign Up</a></button>
+          </div>
+        </form>
+      </div>
+    
+      <div class="card-face card-back">
+        
+        <div class="header">
+          <h2 class="text-xl mb-2 text-white">Create an account</h2>
+          <p class="text-white">Sign up now and join our community!</p>
+        </div>
+      
+        <div class="middle-section">
+         
+          <img src="https://www.signitysolutions.com/hubfs/Imported_Blog_Media/Healtcare-Mobile-Apps-SignitySolutions.jpg" alt="Create Account Image">
+        </div>
+        <div class="body">
+          <p class="text-white">Already have an account? You can sign in on the other side.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <script>
+    const signinCard = document.getElementById('signin-card');
+    const signinForm = document.querySelector('#signin-card form');
+    signinForm.addEventListener('click', function (event) {
+      event.stopPropagation(); 
+    });
+
+    signinCard.addEventListener('click', function () {
+      signinCard.classList.toggle('flipped');
+    });
+
+    const signupCard = document.getElementById('signup-card');
+    const signupForm = document.querySelector('#signup-card form');
+    signupForm.addEventListener('click', function (event) {
+      event.stopPropagation(); 
+    });
+
+    signupCard.addEventListener('click', function () {
+      signupCard.classList.toggle('flipped');
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

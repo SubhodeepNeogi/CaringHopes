@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Page</title>
+  <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <style>
+   
+    .profile-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .profile-buttons button {
+      padding: 0.75rem 0.5rem;
+      border-radius: 10px;
+      font-weight: 100;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .profile-buttons .btn-set-appointments {
+      background-color: #0a3b8b;
+      color: #fff;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .profile-buttons .btn-view-appointments {
+      background-color: #0c8503;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .profile-buttons button:hover {
+      background-color: #0b7807;
+    }
+    .profile-card {
+      background-color: #f0f8ff; 
+    }
+    .statistics-item {
+      position: relative;
+    }
+  
+    .statistics-item::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0; 
+      width: 0;
+      height: 2px;
+      background-color: #3b82f6; 
+      transition: width 0.8s ease, left 0.2s ease; 
+    }
+  
+    .statistics-item:hover::after {
+      width: 100%;
+      left: 0; /* Animate to the right */
+    }
+    @keyframes countUp {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+    /* Apply the animation to the live counter elements */
+    .count-up {
+      animation: countUp 1s ease-in-out;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <main class="profile-page">
+   
+    <section class="relative block h-500-px">
+     
+      <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
+          background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1FSHN8zAvyzUZ1wUNjjbaOmolfNpIc3tFYQ&usqp=CAU');
+        ">
+        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+      </div>
+      
+      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+
+    
+    <section class="relative py-16 bg-blueGray-200">
+      <div class="container mx-auto px-4">
+        
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+          <div class="px-6">
+            <div class="flex flex-wrap justify-center">
+              
+              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                <div class="relative">
+                  <img alt="Profile" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAK-CElhjuzzzdlfG4WVKnpKA4DsL3AZqxfw&usqp=CAU" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px">
+                </div>
+              </div>
+              
+              <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                <div class="py-6 px-3 mt-32 sm:mt-0">
+                  <div class="profile-buttons">
+                  
+                    <button class="btn-set-appointments"><a href ="setappointment.html">Set Appointments</a></button>
+                 
+                    <button class="btn-view-appointments"><a href ="viewbookedappoinments.html">View Appointments</a></button>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="w-full lg:w-4/12 px-4 lg:order-1">
+                <div class="flex justify-center py-4 lg:pt-4 pt-8">
+                  
+                  <div class="mr-4 p-3 text-center statistics-item">
+                    <span id="visitedAppointmentsCount" class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">22</span><span class="text-sm text-blueGray-400">Visited appointments till now</span>
+                  </div>
+                  <div class="mr-4 p-3 text-center statistics-item">
+                    <span id="pendingAppointmentsTodayCount" class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">10</span><span class="text-sm text-blueGray-400">Pending appointments today</span>
+                  </div>
+                  <div class="lg:mr-4 p-3 text-center statistics-item">
+                    <span id="upcomingAppointmentsThisWeekCount" class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">89</span><span class="text-sm text-blueGray-400">Upcoming appointments this week</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="mt-2 py-2 border-t border-blueGray-500 text-center"></div>
+              <div class="flex flex-wrap justify-center"></div>
+            <div class="text-center mt-12">
+              <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                Dr. Kunal Sarkar
+              </h3>
+              <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+                Kolkata, India
+              </div>
+              <div class="mb-2 text-blueGray-600 mt-10">
+                <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>Senior Vice Chairman, Senior Cardiac Heart Surgeon & Head MICS<br>
+                FRCS (ED), FRCS (Glasg), MNMS<br>
+                Specialization: Cardiology
+              </div>
+              <div class="mb-2 text-blueGray-600">
+                <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>Schooling in St. Xavier’s School. Citation for Academic excellence.,<br>Graduated from Medical College, Calcutta with Gold Medal in surgery
+              </div>
+              <div class="mb-2 text-blueGray-600">
+                <i class="fas fa-award mr-2 text-lg text-blueGray-400"></i>President – Indian Association of Cardiovascular and Thoracic Surgeons (IACTS)<br>
+                Chairman – Kolkata Heart Foundation, Calcutta Debating Circle, Kolkata Sukriti Foundation<br>
+                Fellow of Royal College of Surgeons, Edinburgh, and Glasgow<br>
+                Faculty of Imperial College London
+              </div>
+            </div>
+            <!-- User Bio -->
+            <div class="mt-10 py-10 border-t border-blueGray-500 text-center">
+              <div class="flex flex-wrap justify-center">
+                <div class="w-full lg:w-9/12 px-8">
+                  <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
+                    Dr. Kunal Sarkar is one of the Most Experienced Heart Surgeon in Kolkata. He specializes in Complex Heart Surgeries, ECMO, CABG, and Congenital Heart Disease. He is also the Director and Head of Cardiac Surgery at Medica Superspecialty Hospital, Kolkata. Dr. Sarkar is well known for his high success rate in Coronary, Heart Bypass Surgery with over 18,000 happy patients.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="relative bg-blueGray-200 pt-8 pb-6 mt-8">
+        <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+        <div class="text-sm text-blueGray-500 font-semibold py-1">
+          2023 CaringHopes. All rights reserved. <a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank">Notus JS</a> by <a href="https://www.creative-tim.com" class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
+        </div>
+        </div>
+        </div>
+        </div>
+        </footer>
+        </section>
+        
+          </main>
+          <script>
+        
+            function updateCountersWithAnimation() {
+              const visitedAppointments = 22;
+              const pendingAppointmentsToday = 10;
+              const upcomingAppointmentsThisWeek = 89;
+          
+             
+              animateCount(document.getElementById('visitedAppointmentsCount'), visitedAppointments);
+              animateCount(document.getElementById('pendingAppointmentsTodayCount'), pendingAppointmentsToday);
+              animateCount(document.getElementById('upcomingAppointmentsThisWeekCount'), upcomingAppointmentsThisWeek);
+            }
+          
+            
+            function animateCount(element, targetValue) {
+              let currentCount = 0;
+              const increment = Math.ceil(targetValue / 80);
+          
+              
+              const interval = setInterval(() => {
+                currentCount += increment;
+                if (currentCount >= targetValue) {
+                  element.innerText = targetValue;
+                  element.classList.add('count-up'); 
+                  clearInterval(interval);
+                } else {
+                  element.innerText = currentCount;
+                }
+              }, 20); 
+            }
+          
+            
+            updateCountersWithAnimation();
+          </script>
+          
+          
+       
+        </body>
+        </html>
