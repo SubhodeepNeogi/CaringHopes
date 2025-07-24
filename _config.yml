@@ -2,3 +2,7 @@ exclude:
   - node_modules
   - Patient_Doctor_list/node_modules
   - Patient_Doctor_list/**/node_modules
+  - TAILWIND/node_modules
+  - TAILWIND/**/node_modules
+  - landing_page/node_modules
+  - landing_page/**/node_modules
